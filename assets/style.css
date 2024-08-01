@@ -67,6 +67,7 @@ main{
     flex-direction: column;
     align-items: flex-end;
     width: 777px;
+    margin-top: 10px;
 }
 
 .mensagem{

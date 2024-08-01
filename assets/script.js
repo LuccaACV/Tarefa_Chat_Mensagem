@@ -3,6 +3,7 @@
 
 
 let botao_enviar = document.getElementById("btn_enviar")
+var cont = 0;
 
 botao_enviar.addEventListener("click", ()=>{
     let mensagem = document.getElementById("textarea_mensagem");
@@ -25,12 +26,14 @@ botao_enviar.addEventListener("click", ()=>{
     let div_mensagem_botao = document.createElement("div");
     div_mensagem_botao.classList.add("mensagem_botoes")
 
-
+    cont++;
     let botao_excluir = document.createElement("button");
+    botao_excluir.type = "button";
     botao_excluir.innerHTML = "Excluir";
     botao_excluir.classList.add("btn_excluir")
 
     let botao_editar = document.createElement("button");
+    botao_editar.type = "button";
     botao_editar.innerHTML = "Editar";
     botao_editar.classList.add("btn_editar")
 
@@ -42,6 +45,13 @@ botao_enviar.addEventListener("click", ()=>{
     espaco_mensagem.append(div);
 
     div.scrollIntoView({ behavior: 'smooth', block: 'end' });
-})
 
+    botao_editar.addEventListener("click", ()=>{
+        console.log("OLAAAAAAAAAAA");
+    })
+
+    botao_excluir.addEventListener("click", ()=>{
+        div.remove();
+    })
+})
 
