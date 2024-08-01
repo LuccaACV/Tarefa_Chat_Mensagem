@@ -55,9 +55,10 @@ main{
     min-height: 426px;
     width: 100%;
     display: flex;
-    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
+    overflow-y: scroll;
+    gap: 10px;
 }
 
 .corpo_mensagem{
@@ -65,17 +66,15 @@ main{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    height: 88px;
     width: 777px;
-    margin-top: 10px;
 }
 
 .mensagem{
 
     width: 735px;
-    height: 60px;
     padding: 10px 20px;
     border: 1px solid black;
+    overflow-wrap: break-word;
 }
 
 .mensagem_botoes{
@@ -83,7 +82,7 @@ main{
     justify-content: flex-end;
 }
 
-#btn_editar{
+.btn_editar{
     
     background-color: #F6A75D;
     margin: 0px;
@@ -91,7 +90,7 @@ main{
     height: 26px;
 }
 
-#btn_excluir{
+.btn_excluir{
     
     background-color: #F65D5D;
     margin: 0px;
