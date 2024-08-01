@@ -1,0 +1,60 @@
+
+*{
+   font-family: "Roboto";
+}
+
+.janela_toda{
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+}
+.cabecalho{
+    max-width: 817px;
+    min-width: 817px;
+    max-height: 68px;
+    min-height: 68px;
+    background-color: #c4c4c4;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid black;
+}
+
+.nome{
+
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+.corpo_mensagem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 817px;
+    min-height: 596px;
+    background-color: #fafafa;
+    border: 1px solid black;
+}
+.campo_leitura{
+    min-height: 426px;
+    width: 100%;
+    background-color: aqua;
+}
+
+.campo_digitar{
+    min-width: 609px;
+    max-width: 609px;
+    min-height: 170px;
+    max-height: 170px;
+    background-color: #c4c4c4;
+    border: 1px solid black;
+}
+
+textarea {
+    margin: 10px;
+    width: 500px;
+    height: 150px;
+    resize: none;
+}
