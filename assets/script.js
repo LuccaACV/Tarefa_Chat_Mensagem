@@ -47,7 +47,8 @@ botao_enviar.addEventListener("click", ()=>{
     div.scrollIntoView({ behavior: 'smooth', block: 'end' });
 
     botao_editar.addEventListener("click", ()=>{
-        console.log("OLAAAAAAAAAAA");
+        let teste = prompt("Insira sua mensagem editada: ");
+        p.innerHTML = teste;
     })
 
     botao_excluir.addEventListener("click", ()=>{
