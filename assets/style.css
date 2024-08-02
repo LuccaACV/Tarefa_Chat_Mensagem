@@ -110,7 +110,7 @@ main{
     display: flex;
 }
 
-textarea {
+#textarea_mensagem{
 
     width: 460px;
     height: 110px;
@@ -131,4 +131,29 @@ textarea {
     margin-top: 10px;
     font-weight: 400;
     color: #FFFFFF;
+}
+
+.escondido{
+
+    display: none;
+}
+
+.textarea_mensagem_editado{
+
+    width: 725px;
+    height: 150px;
+    resize: none;
+}
+
+.btn_aceitar{
+
+    background-color: greenyellow;
+    margin: 0px;
+    border: 0px;
+    height: 26px;
+}
+
+.mensagem_botoes_invertido{
+
+    flex-direction: row-reverse;
 }

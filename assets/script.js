@@ -1,7 +1,4 @@
 
-
-
-
 let botao_enviar = document.getElementById("btn_enviar")
 var cont = 0;
 
@@ -47,8 +44,28 @@ botao_enviar.addEventListener("click", ()=>{
     div.scrollIntoView({ behavior: 'smooth', block: 'end' });
 
     botao_editar.addEventListener("click", ()=>{
-        let teste = prompt("Insira sua mensagem editada: ");
-        p.innerHTML = teste;
+        p.classList.add("escondido");
+        botao_editar.classList.add("escondido");
+        let btn_aceitar = document.createElement("button");
+        btn_aceitar.type = "button";
+        btn_aceitar.innerHTML = "Aceitar";
+        btn_aceitar.classList.add("btn_aceitar");
+        div_mensagem_botao.append(btn_aceitar);
+        div_mensagem_botao.classList.add("mensagem_botoes_invertido");
+
+        let textarea = document.createElement("textarea");
+        textarea.classList.add("textarea_mensagem_editado");
+        textarea.innerHTML = p.innerHTML;
+        div_mensagem.append(textarea);
+
+        btn_aceitar.addEventListener("click", ()=>{
+            p.innerHTML = textarea.value;
+            textarea.remove();
+            btn_aceitar.remove();
+            p.classList.remove("escondido");
+            botao_editar.classList.remove("escondido");
+            div_mensagem_botao.classList.remove("mensagem_botoes_invertido");
+        })
     })
 
     botao_excluir.addEventListener("click", ()=>{
